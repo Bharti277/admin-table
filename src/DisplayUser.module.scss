@@ -1,0 +1,54 @@
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+.heading {
+  margin-bottom: 18px;
+  color: #222;
+  font-weight: 600;
+}
+
+.userList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.empty {
+  color: #888;
+  text-align: center;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.userName {
+  font-size: 16px;
+  color: #333;
+}
+
+.deleteBtn {
+  background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(255, 88, 88, 0.08);
+}

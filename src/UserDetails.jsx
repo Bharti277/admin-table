@@ -1,5 +1,5 @@
 import React from "react";
-import "./UserDetails.scss";
+import styles from "./UserDetails.module.scss";
 import { fakeUserData } from "./api";
 import { useDispatch } from "react-redux";
 import { addUser, removeAllUsers } from "./store/slices/UserSlice";
@@ -16,20 +16,23 @@ const UserDetails = () => {
     dispatch(removeAllUsers());
   };
   return (
-    <>
-      <div className="user-details">
-        <h2>List of User Details</h2>
-        <button className="btn" onClick={() => addNewUser(fakeUserData())}>
+    <div className={styles.wrapper}>
+      <div className={styles.header}>
+        <h2 className={styles.heading}>List of User Details</h2>
+        <button
+          className={styles.addBtn}
+          onClick={() => addNewUser(fakeUserData())}
+        >
           Add New User
         </button>
       </div>
-      <div>
-        <ul>
-          <DisplayUser />
-        </ul>
-        <button onClick={clearAllUsers}>Clear All User</button>
+      <div className={styles.listSection}>
+        <DisplayUser />
+        <button className={styles.clearBtn} onClick={clearAllUsers}>
+          Clear All User
+        </button>
       </div>
-    </>
+    </div>
   );
 };
 
